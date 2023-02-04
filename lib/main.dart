@@ -1,4 +1,5 @@
 import 'package:beeline_assistant/presentation/home_screen.dart';
+import 'package:beeline_assistant/presentation/pages/phone_inforomation/phone_inforamtion.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 // ignore: unused_import, library_prefixes
@@ -41,7 +42,8 @@ class MyApp extends StatelessWidget {
           disabledColor: Color.fromRGBO(138, 138, 138, 1.0),
         ),
       ),
-      home: const HomeScreen(),
+      // home: const HomeScreen(),
+      home: const PhoneInformation(),
     );
   }
 }

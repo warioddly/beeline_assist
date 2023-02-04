@@ -23,39 +23,43 @@ class _SignUpScreenState extends State<SignUpScreen> with RouteAware {
           children: [
 
             Expanded(
-                child: Container(
-                  constraints: const BoxConstraints(
-                    maxWidth: 480
-                  ),
+              child: Container(
                   padding: const EdgeInsets.symmetric(horizontal: 16),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      const Text(
-                        'Beeline',
-                        style: TextStyle(
-                            color: Color.fromRGBO(37, 31, 31, 1),
-                            fontSize: 32,
-                            fontWeight: FontWeight.w700
-                        ),
+                  child: Center(
+                    child: Container(
+                      constraints: const BoxConstraints(
+                          maxWidth: 480
                       ),
-                      TextInputField(
-                        title: 'Войдите чтобы продолжить',
-                        textType: TextInputType.phone,
-                      ),
-                      const SizedBox(height: 21),
-                      SelectableText(
-                        'Не получили код?',
-                        onTap: () {},
-                        textAlign: TextAlign.center,
-                        style: const TextStyle(
-                          color: Color.fromRGBO(148, 152, 179, 1),
-                          fontWeight: FontWeight.w400
-                        ),
-                      )
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [
+                          const Text(
+                            'Beeline',
+                            style: TextStyle(
+                                color: Color.fromRGBO(37, 31, 31, 1),
+                                fontSize: 32,
+                                fontWeight: FontWeight.w700
+                            ),
+                          ),
+                          TextInputField(
+                            title: 'Войдите чтобы продолжить',
+                            textType: TextInputType.phone,
+                          ),
+                          const SizedBox(height: 21),
+                          SelectableText(
+                            'Не получили код?',
+                            onTap: () {},
+                            textAlign: TextAlign.center,
+                            style: const TextStyle(
+                                color: Color.fromRGBO(148, 152, 179, 1),
+                                fontWeight: FontWeight.w400
+                            ),
+                          )
 
-                    ],
+                        ],
+                      ),
+                    ),
                   ),
                 )
             ),

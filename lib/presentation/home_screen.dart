@@ -22,36 +22,41 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             Expanded(
               child: Container(
-                constraints: const BoxConstraints(
-                    maxWidth: 498
-                ),
                 decoration: const BoxDecoration(
                     gradient: LinearGradient(
                       colors: [
                         Color.fromRGBO(255, 159, 0, 1),
                         Color.fromRGBO(255, 201, 0, 1)
                       ],
-                    )),
-                padding: const EdgeInsets.symmetric(horizontal: 16),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-
-                    MainMenuCard(
-                      title: 'Информация по Вашему номеру',
-                      subTitle: 'Пополнение баланса, Тарифы, Услуги',
-                      onTap: () => Navigator.push(context, CupertinoPageRoute(builder: (context) => const SignUpScreen())),
                     ),
+                ),
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: Center(
+                  child: Container(
+                    constraints: const BoxConstraints(
+                        maxWidth: 498
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
 
-                    const SizedBox(height: 38),
+                        MainMenuCard(
+                          title: 'Информация по Вашему номеру',
+                          subTitle: 'Пополнение баланса, Тарифы, Услуги',
+                          onTap: () => Navigator.push(context, CupertinoPageRoute(builder: (context) => const SignUpScreen())),
+                        ),
 
-                    MainMenuCard(
-                      title: 'Информация по Вашему номеру',
-                      subTitle: 'Пополнение баланса, Тарифы, Услуги',
-                      onTap: () => Navigator.push(context, CupertinoPageRoute(builder: (context) => const StartScreen())),
-                    )
+                        const SizedBox(height: 38),
 
-                  ],
+                        MainMenuCard(
+                          title: 'Информация по Вашему номеру',
+                          subTitle: 'Пополнение баланса, Тарифы, Услуги',
+                          onTap: () => Navigator.push(context, CupertinoPageRoute(builder: (context) => const StartScreen())),
+                        )
+
+                      ],
+                    ),
+                  ),
                 ),
               ),
             )

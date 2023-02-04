@@ -19,40 +19,40 @@ class _BlackButtonState extends State<BlackButton> with RouteAware {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 38,
-      decoration: BoxDecoration(
-        boxShadow: const [
-          BoxShadow(
-              color: Color.fromRGBO(0, 0, 0, 0.15), offset: Offset(0, 4), blurRadius: 5.0)
-        ],
-        gradient: const LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-          colors: [
-            Color.fromRGBO(35, 35, 37, 1),
-            Color.fromRGBO(45, 45, 45, 1),
+      width: double.infinity,
+      child: Container(
+        decoration: BoxDecoration(
+          boxShadow: const [
+            BoxShadow(
+                color: Color.fromRGBO(0, 0, 0, 0.15), offset: Offset(0, 4), blurRadius: 5.0)
           ],
-        ),
-        color: const Color.fromRGBO(255, 201, 0, 1),
-        borderRadius: BorderRadius.circular(50),
-      ),
-      child: ElevatedButton(
-        style: ButtonStyle(
-          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-            RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(50.0),
-            ),
+          gradient: const LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [
+              Color.fromRGBO(35, 35, 37, 1),
+              Color.fromRGBO(45, 45, 45, 1),
+            ],
           ),
-          minimumSize: MaterialStateProperty.all(Size(40, 50)),
-          backgroundColor:
-          MaterialStateProperty.all(Colors.transparent),
-          elevation: MaterialStateProperty.all(3),
-          shadowColor: MaterialStateProperty.all(Colors.transparent),
+          color: const Color.fromRGBO(255, 201, 0, 1),
+          borderRadius: BorderRadius.circular(50),
         ),
-        onPressed: onPressed,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 38, vertical: 8),
+        child: ElevatedButton(
+          style: ButtonStyle(
+            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+              RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(50.0),
+              ),
+            ),
+            minimumSize: MaterialStateProperty.all(Size(40, 50)),
+            backgroundColor:
+            MaterialStateProperty.all(Colors.transparent),
+            elevation: MaterialStateProperty.all(3),
+            shadowColor: MaterialStateProperty.all(Colors.transparent),
+          ),
+          onPressed: onPressed,
           child: Text(
             title,
             style: const TextStyle(
