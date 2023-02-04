@@ -55,8 +55,6 @@ class _CarouselCardState extends State<CarouselCard> with RouteAware {
 
           const SizedBox(height: 3),
 
-          widget.subTitle ?? const SizedBox(),
-
           Container(
             margin: const EdgeInsets.symmetric(vertical: 5),
             height: 1,
@@ -65,6 +63,8 @@ class _CarouselCardState extends State<CarouselCard> with RouteAware {
           ),
 
           widget.bodyTitle ?? const SizedBox(),
+
+          SizedBox(height: widget.bodyTitle != null ? 5 : 0),
 
           RichText(
             text: const TextSpan(

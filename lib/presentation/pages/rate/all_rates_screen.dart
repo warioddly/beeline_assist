@@ -111,7 +111,8 @@ class _AllRatesScreenState extends State<AllRatesScreen> {
 
                     const SizedBox(height: 22),
 
-                    Center(
+                    Align(
+                      alignment: Alignment.topCenter,
                       child: Container(
                         constraints: const BoxConstraints(
                           maxWidth: 920
@@ -156,12 +157,45 @@ class _AllRatesScreenState extends State<AllRatesScreen> {
                                     children: [
 
                                       Row(
-                                        children: const [
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
 
                                           Expanded(
                                             child: Center(
                                               child: CarouselCard(
                                                 title: 'Бирге для интернета PRO + ИВИ',
+                                                bodyTitle: RichText(
+                                                  text: const TextSpan(
+                                                    text: 'Активируй ivi в Мой Beeline',
+                                                    style: TextStyle(
+                                                      color: Colors.red,
+                                                      fontWeight: FontWeight.w700,
+                                                      fontSize: 14
+                                                    )
+                                                  ),
+                                                ),
+                                                subTitle: RichText(
+                                                  text: const TextSpan(
+                                                      children: [
+                                                        TextSpan(
+                                                          text: '690 сом',
+                                                          style: TextStyle(
+                                                              color: Colors.black,
+                                                              fontWeight: FontWeight.w700,
+                                                              fontSize: 20
+                                                          ),
+                                                        ),
+                                                        TextSpan(
+                                                          text: ' / за 4 недели',
+                                                          style: TextStyle(
+                                                              color: Color.fromRGBO(148, 152, 179, 1),
+                                                              fontWeight: FontWeight.w400,
+                                                              fontSize: 14
+                                                          ),
+                                                        ),
+                                                      ]
+                                                  ),
+                                                ),
                                               ),
                                             ),
                                           ),
@@ -170,6 +204,16 @@ class _AllRatesScreenState extends State<AllRatesScreen> {
                                             child: Center(
                                               child: CarouselCard(
                                                 title: 'Бирге для интернета PRO + ИВИ',
+                                                bodyTitle: RichText(
+                                                  text: const TextSpan(
+                                                      text: 'Подключай музыку в Мой Билайн',
+                                                      style: TextStyle(
+                                                          color: Color.fromRGBO(36, 154, 254, 1),
+                                                          fontWeight: FontWeight.w700,
+                                                          fontSize: 14
+                                                      )
+                                                  ),
+                                                ),
                                               ),
                                             ),
                                           ),
@@ -178,6 +222,28 @@ class _AllRatesScreenState extends State<AllRatesScreen> {
                                             child: Center(
                                               child: CarouselCard(
                                                 title: 'Бирге для интернета PRO + ИВИ',
+                                                subTitle: RichText(
+                                                  text: const TextSpan(
+                                                    children: [
+                                                      TextSpan(
+                                                        text: '690 сом',
+                                                        style: TextStyle(
+                                                            color: Colors.black,
+                                                            fontWeight: FontWeight.w700,
+                                                            fontSize: 20
+                                                        ),
+                                                      ),
+                                                      TextSpan(
+                                                        text: ' / за 4 недели',
+                                                        style: TextStyle(
+                                                            color: Color.fromRGBO(148, 152, 179, 1),
+                                                            fontWeight: FontWeight.w400,
+                                                            fontSize: 14
+                                                        ),
+                                                      ),
+                                                    ]
+                                                  ),
+                                                ),
                                               ),
                                             ),
                                           ),
