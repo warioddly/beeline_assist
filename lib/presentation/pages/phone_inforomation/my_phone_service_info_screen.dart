@@ -262,7 +262,7 @@ class _MyPhoneServiceInfoScreenState extends State<MyPhoneServiceInfoScreen> {
                                   Align(
                                     alignment: Alignment.centerLeft,
                                     child: Container(
-                                    constraints: BoxConstraints(
+                                    constraints: const BoxConstraints(
                                         maxWidth: 270
                                     ),
                                     child: BlackButton(

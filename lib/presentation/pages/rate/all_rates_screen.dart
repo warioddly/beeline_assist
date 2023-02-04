@@ -55,10 +55,6 @@ class _AllRatesScreenState extends State<AllRatesScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
 
-                    Center(
-                      child: CarouselCard(title: 'title'),
-                    ),
-
                     const SizedBox(height: 22),
 
                     Center(
@@ -156,20 +152,67 @@ class _AllRatesScreenState extends State<AllRatesScreen> {
                                   ExpandablePageView(
                                     controller: pageControllers['controller_0'],
                                     animationDuration: const Duration(milliseconds: 300),
-                                    // physics: const NeverScrollableScrollPhysics(),
+                                    physics: const BouncingScrollPhysics(),
                                     children: [
 
-                                      Container(
-                                        height: 300,
-                                        width: 300,
-                                        color: Colors.green,
-                                      ),
+                                      Row(
+                                        children: const [
 
-                                      Container(
-                                        height: 300,
-                                        width: 300,
-                                        color: Colors.redAccent,
-                                      )
+                                          Expanded(
+                                            child: Center(
+                                              child: CarouselCard(
+                                                title: 'Бирге для интернета PRO + ИВИ',
+                                              ),
+                                            ),
+                                          ),
+
+                                          Expanded(
+                                            child: Center(
+                                              child: CarouselCard(
+                                                title: 'Бирге для интернета PRO + ИВИ',
+                                              ),
+                                            ),
+                                          ),
+
+                                          Expanded(
+                                            child: Center(
+                                              child: CarouselCard(
+                                                title: 'Бирге для интернета PRO + ИВИ',
+                                              ),
+                                            ),
+                                          ),
+
+                                        ],
+                                      ),
+                                      Row(
+                                        children: const [
+
+                                          Expanded(
+                                            child: Center(
+                                              child: CarouselCard(
+                                                title: 'Бирге для интернета PRO + ИВИ',
+                                              ),
+                                            ),
+                                          ),
+
+                                          Expanded(
+                                            child: Center(
+                                              child: CarouselCard(
+                                                title: 'Бирге для интернета PRO + ИВИ',
+                                              ),
+                                            ),
+                                          ),
+
+                                          Expanded(
+                                            child: Center(
+                                              child: CarouselCard(
+                                                title: 'Бирге для интернета PRO + ИВИ',
+                                              ),
+                                            ),
+                                          ),
+
+                                        ],
+                                      ),
 
                                     ],
                                   ),
@@ -177,17 +220,17 @@ class _AllRatesScreenState extends State<AllRatesScreen> {
                                   ExpandablePageView(
                                     controller: pageControllers['controller_1'],
                                     animationDuration: const Duration(milliseconds: 300),
-                                    // physics: const NeverScrollableScrollPhysics(),
+                                    physics: const BouncingScrollPhysics(),
                                     children: [
 
                                       Container(
-                                        height: 300,
+                                        height: 200,
                                         width: 300,
                                         color: Colors.cyan,
                                       ),
 
                                       Container(
-                                        height: 300,
+                                        height: 500,
                                         width: 300,
                                         color: Colors.white30,
                                       )
@@ -198,17 +241,17 @@ class _AllRatesScreenState extends State<AllRatesScreen> {
                                   ExpandablePageView(
                                     controller: pageControllers['controller_2'],
                                     animationDuration: const Duration(milliseconds: 300),
-                                    // physics: const NeverScrollableScrollPhysics(),
+                                    physics: const BouncingScrollPhysics(),
                                     children: [
 
                                       Container(
-                                        height: 300,
+                                        height: 600,
                                         width: 300,
                                         color: Colors.green,
                                       ),
 
                                       Container(
-                                        height: 300,
+                                        height: 100,
                                         width: 300,
                                         color: Colors.redAccent,
                                       )
@@ -219,7 +262,7 @@ class _AllRatesScreenState extends State<AllRatesScreen> {
                                   ExpandablePageView(
                                     controller: pageControllers['controller_3'],
                                     animationDuration: const Duration(milliseconds: 300),
-                                    // physics: const NeverScrollableScrollPhysics(),
+                                    physics: const BouncingScrollPhysics(),
                                     children: [
 
                                       Container(
