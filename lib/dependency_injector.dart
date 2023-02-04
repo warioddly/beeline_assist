@@ -1,6 +1,4 @@
 import 'package:get_it/get_it.dart';
-import 'package:beeline_assistant/data/datasource/example/example_datasource.dart';
-import 'package:beeline_assistant/data/datasource/example/example_datasource_impl.dart';
 import 'package:beeline_assistant/data/repositories/example_repository_impl.dart';
 import 'package:beeline_assistant/domain/repositories/example_repository.dart';
 import 'package:beeline_assistant/domain/usecases/example/example_usecase.dart';

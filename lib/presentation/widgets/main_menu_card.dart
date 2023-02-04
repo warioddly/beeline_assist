@@ -1,18 +1,16 @@
-import 'package:beeline_assistant/presentation/pages/auth/sign_up_screen.dart';
-import 'package:beeline_assistant/presentation/widgets/yellow_button.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class MainMenuCard extends StatefulWidget {
 
-  const MainMenuCard({Key? key, this.onTap, required this.title, this.subTitle, this.headerText }) : super(key: key);
+  const MainMenuCard({Key? key, this.onTap, required this.title, this.subTitle, this.headerText, this.padding }) : super(key: key);
 
 
   final Function()? onTap;
   final String? headerText;
   final String title;
   final String? subTitle;
+  final EdgeInsetsGeometry? padding;
 
   @override
   _MainMenuCardState createState() => _MainMenuCardState();
@@ -28,7 +26,7 @@ class _MainMenuCardState extends State<MainMenuCard> with RouteAware {
       borderRadius: BorderRadius.circular(16),
       child: Container(
         width: double.infinity,
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+        padding: widget.padding ?? const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
         decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(16)

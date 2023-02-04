@@ -1,18 +1,15 @@
 import 'package:beeline_assistant/presentation/widgets/black_button.dart';
 import 'package:beeline_assistant/presentation/widgets/main_menu_card.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'my_phone_service_info_screen.dart';
-
-class PhoneInformationScreen extends StatefulWidget {
-  const PhoneInformationScreen({Key? key}) : super(key: key);
+class MyPhoneServicesScreen extends StatefulWidget {
+  const MyPhoneServicesScreen({Key? key}) : super(key: key);
 
   @override
-  _PhoneInformationScreenState createState() => _PhoneInformationScreenState();
+  _MyPhoneServicesScreenState createState() => _MyPhoneServicesScreenState();
 }
 
-class _PhoneInformationScreenState extends State<PhoneInformationScreen> {
+class _MyPhoneServicesScreenState extends State<MyPhoneServicesScreen> {
 
   @override
   Widget build(BuildContext context) {
@@ -88,7 +85,7 @@ class _PhoneInformationScreenState extends State<PhoneInformationScreen> {
                             headerText: "Ваш тариф",
                             title: "Безлимит+",
                             subTitle: "980 cом / 4 недели",
-                            onTap: () => Navigator.push(context, CupertinoPageRoute(builder: (context) => const MyPhoneServiceInfoScreen())),
+                            onTap: () {},
                             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 13),
                           ),
 
