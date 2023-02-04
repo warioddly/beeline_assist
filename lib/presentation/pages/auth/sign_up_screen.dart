@@ -1,3 +1,4 @@
+import 'package:beeline_assistant/presentation/pages/auth/password_screen.dart';
 import 'package:beeline_assistant/presentation/widgets/text_input_field.dart';
 import 'package:beeline_assistant/presentation/widgets/yellow_button.dart';
 import 'package:flutter/material.dart';
@@ -68,7 +69,10 @@ class _SignUpScreenState extends State<SignUpScreen> with RouteAware {
               alignment: Alignment.bottomCenter,
               child: Padding(
                 padding: const EdgeInsets.only(bottom: 38),
-                child: YellowButton(title: 'Продолжить', onPressed: () {}),
+                child: YellowButton(title: 'Продолжить', onPressed: () {Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => PasswordScreen()),
+                );}),
               ),
             ),
 

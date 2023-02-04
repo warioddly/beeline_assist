@@ -3,6 +3,7 @@ import 'package:beeline_assistant/data/repositories/example_repository_impl.dart
 import 'package:beeline_assistant/domain/repositories/example_repository.dart';
 import 'package:beeline_assistant/domain/usecases/example/example_usecase.dart';
 import 'package:beeline_assistant/presentation/cubit/example/example_cubit.dart';
+import 'package:get_it/get_it.dart';
 
 
 // final dio = Dio();

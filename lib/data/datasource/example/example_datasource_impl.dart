@@ -1,6 +1,6 @@
-import 'package:dartz/dartz.dart';
 import 'package:beeline_assistant/data/datasource/example/example_datasource.dart';
 import 'package:beeline_assistant/services/error/failure.dart';
+import 'package:dartz/dartz.dart';
 
 class ExampleDataSourceImpl implements ExampleDataSource {
 

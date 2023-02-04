@@ -1,10 +1,9 @@
-import 'package:beeline_assistant/presentation/pages/phone_inforomation/my_phone_service_info_screen.dart';
-import 'package:beeline_assistant/presentation/pages/phone_inforomation/phone_inforamtion.dart';
-import 'package:beeline_assistant/presentation/pages/rate/all_rates_screen.dart';
+import 'package:beeline_assistant/presentation/pages/auth/password_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 // ignore: unused_import, library_prefixes
 // import 'package:beeline_assistant/dependency_injector.dart' as DI;
-
+import 'package:beeline_assistant/presentation/pages/phone_inforomation/component_alert_accept_tariff.dart';
 
 import 'services/ui/CustomScrollBehavior.dart';
 
@@ -27,6 +26,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+
       title: 'UVED',
       theme: ThemeData(
         visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -42,8 +42,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       // home: const HomeScreen(),
-      home: const AllRatesScreen(),
-      // home: const PhoneInformationScreen(),
+      home: ComponentAlertAcceptTariff()
     );
   }
 }
