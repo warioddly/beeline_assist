@@ -28,8 +28,7 @@ class AppThemeData {
   /// Для получения кастомного цвета или стиля
   // Theme.of(context).textButtonTheme.style?.copyWith(backgroundColor: MaterialStateProperty.all(AppThemeData.primary));
 
-  static const EdgeInsets padding =
-  EdgeInsets.symmetric(horizontal: 40, vertical: 12);
+  static const EdgeInsets padding = EdgeInsets.symmetric(horizontal: 40, vertical: 12);
 
   final border = RoundedRectangleBorder(
     borderRadius: BorderRadius.circular(5.0),
@@ -38,13 +37,10 @@ class AppThemeData {
   ThemeData get materialTheme {
     return ThemeData(
       hintColor: hintColor,
-      dialogTheme: const DialogTheme(
-          contentTextStyle: TextStyle(color: secondary, fontSize: 16)
-      ),
-      appBarTheme:const AppBarTheme(color: screenColor,titleTextStyle: TextStyle(color: secondary)),
+      dialogTheme: const DialogTheme(contentTextStyle: TextStyle(color: secondary, fontSize: 16)),
+      appBarTheme: const AppBarTheme(color: screenColor, titleTextStyle: TextStyle(color: secondary)),
       iconTheme: const IconThemeData(color: Colors.red),
       scaffoldBackgroundColor: screenColor,
-      errorColor: errorColor,
       fontFamily: 'Inter',
       textButtonTheme: TextButtonThemeData(
         style: TextButton.styleFrom(

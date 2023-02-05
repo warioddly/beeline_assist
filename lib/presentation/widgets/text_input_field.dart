@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../../../services/ui/theme_data.dart';
-
 class TextInputField extends StatefulWidget {
-
   final TextEditingController? controller;
   final String title;
   final String? hintText;
@@ -35,7 +32,6 @@ class TextInputField extends StatefulWidget {
 }
 
 class _TextInputFieldState extends State<TextInputField> {
-
   late TextEditingController textController = widget.controller ?? TextEditingController();
 
   @override
@@ -45,16 +41,10 @@ class _TextInputFieldState extends State<TextInputField> {
       children: [
         RichText(
           text: TextSpan(
-            style: const TextStyle(
-                color: Colors.black,
-                fontWeight: FontWeight.w300,
-                fontSize: 16
-            ),
+            style: const TextStyle(color: Colors.black, fontWeight: FontWeight.w300, fontSize: 16),
             children: [
               TextSpan(text: widget.title),
-              widget.isRequired
-                  ? const TextSpan(text: '*')
-                  : const TextSpan(text: '')
+              widget.isRequired ? const TextSpan(text: '*') : const TextSpan(text: '')
             ],
           ),
         ),
@@ -62,66 +52,61 @@ class _TextInputFieldState extends State<TextInputField> {
         TextFormField(
           onSaved: widget.onSaved,
           inputFormatters: widget.inputFormatters,
-          validator: widget.isRequired ? (value) {
-              if (widget.validator != null) {
-                  return widget.validator!(value);
-              }
-            return null;
-          } : null,
+          validator: widget.isRequired
+              ? (value) {
+                  if (widget.validator != null) {
+                    return widget.validator!(value);
+                  }
+                  return null;
+                }
+              : null,
           controller: textController,
           keyboardType: widget.textType,
-          onChanged: (_) { setState(() {}); },
+          onChanged: (_) {
+            setState(() {});
+          },
           decoration: InputDecoration(
-            contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-            hintText: widget.hintText,
-            hintStyle: const TextStyle(
-              color: Colors.black,
-              fontSize: 16,
-              fontWeight: FontWeight.w400
-            ),
-            suffixIcon: Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                textController.text.isNotEmpty
-                  ? IconButton(
-                      iconSize: 24,
-                      color: const Color.fromRGBO(116, 116, 116, 1),
-                      icon: const Icon(Icons.clear, color: AppThemeData.primary),
-                      onPressed: () {
-                        textController.clear();
-                        setState(() {});
-                      },
-                    )
-                  : const SizedBox(),
-              ],
-            ),
-            isDense: true,
-            errorStyle: const TextStyle(fontSize: 16),
-            focusedBorder: OutlineInputBorder(
-              borderSide: const BorderSide(
-                width: 1,
-                color: Colors.black,
+              contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+              hintText: widget.hintText,
+              hintStyle: const TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.w400),
+              suffixIcon: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  textController.text.isNotEmpty
+                      ? IconButton(
+                          iconSize: 24,
+                          color: const Color.fromRGBO(116, 116, 116, 1),
+                          icon: const Icon(Icons.clear, color: Colors.black),
+                          onPressed: () {
+                            textController.clear();
+                            setState(() {});
+                          },
+                        )
+                      : const SizedBox(),
+                ],
               ),
-              borderRadius: BorderRadius.circular(50.0),
-            ),
-            enabledBorder: OutlineInputBorder(
-              borderSide: const BorderSide(
-                width: 1,
-                color: Colors.black,
+              isDense: true,
+              errorStyle: const TextStyle(fontSize: 16),
+              focusedBorder: OutlineInputBorder(
+                borderSide: const BorderSide(
+                  width: 1,
+                  color: Colors.black,
+                ),
+                borderRadius: BorderRadius.circular(50.0),
               ),
-              borderRadius: BorderRadius.circular(50.0),
-            ),
-            border: OutlineInputBorder(
-              borderSide: const BorderSide(color: Colors.red, width: 1),
-              borderRadius: BorderRadius.circular(50.0),
-            ),
-            errorText: widget.errorText
-          ),
-          style: const TextStyle(
-              fontSize: 16,
-              color: Colors.black,
-              fontWeight: FontWeight.w400
-          ),
+              enabledBorder: OutlineInputBorder(
+                borderSide: const BorderSide(
+                  width: 1,
+                  color: Colors.black,
+                ),
+                borderRadius: BorderRadius.circular(50.0),
+              ),
+              border: OutlineInputBorder(
+                borderSide: const BorderSide(color: Colors.red, width: 1),
+                borderRadius: BorderRadius.circular(50.0),
+              ),
+              errorText: widget.errorText),
+          style: const TextStyle(fontSize: 16, color: Colors.black, fontWeight: FontWeight.w400),
         ),
       ],
     );

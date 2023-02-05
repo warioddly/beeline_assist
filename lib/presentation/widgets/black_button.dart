@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
 class BlackButton extends StatefulWidget {
-
-  const BlackButton({Key? key, this.onPressed, required this.title }) : super(key: key);
+  const BlackButton({Key? key, this.onPressed, required this.title}) : super(key: key);
 
   final String title;
   final Function()? onPressed;
@@ -12,8 +11,8 @@ class BlackButton extends StatefulWidget {
 }
 
 class _BlackButtonState extends State<BlackButton> with RouteAware {
-
   String get title => widget.title;
+
   Function()? get onPressed => widget.onPressed;
 
   @override
@@ -23,10 +22,7 @@ class _BlackButtonState extends State<BlackButton> with RouteAware {
       width: double.infinity,
       child: Container(
         decoration: BoxDecoration(
-          boxShadow: const [
-            BoxShadow(
-                color: Color.fromRGBO(0, 0, 0, 0.15), offset: Offset(0, 4), blurRadius: 5.0)
-          ],
+          boxShadow: const [BoxShadow(color: Color.fromRGBO(0, 0, 0, 0.15), offset: Offset(0, 4), blurRadius: 5.0)],
           gradient: const LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
@@ -46,8 +42,7 @@ class _BlackButtonState extends State<BlackButton> with RouteAware {
               ),
             ),
             minimumSize: MaterialStateProperty.all(Size(40, 50)),
-            backgroundColor:
-            MaterialStateProperty.all(Colors.transparent),
+            backgroundColor: MaterialStateProperty.all(Colors.transparent),
             elevation: MaterialStateProperty.all(3),
             shadowColor: MaterialStateProperty.all(Colors.transparent),
           ),
@@ -64,5 +59,4 @@ class _BlackButtonState extends State<BlackButton> with RouteAware {
       ),
     );
   }
-
 }
