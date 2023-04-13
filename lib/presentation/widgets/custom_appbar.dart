@@ -8,11 +8,13 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
     this.leading = true,
     this.title,
     this.titleColor,
+    this.centerTitle = false,
     this.logout = false,
     this.leadingColor = Colors.black,
   });
 
   final bool leading;
+  final bool centerTitle;
   final String? title;
   final Color? titleColor;
   final Color? leadingColor;
@@ -28,18 +30,15 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
           title ?? '',
           style: TextStyle(color: titleColor, fontWeight: FontWeight.w700, fontSize: 20),
         ),
+        excludeHeaderSemantics: true,
         automaticallyImplyLeading: false,
         leading: leading
             ? InkWell(
                 onTap: () => Navigator.pop(context),
                 child: Container(
-                  margin: const EdgeInsets.only(left: 15, top: 15),
+                  margin: const EdgeInsets.only(left: 15),
                   width: 37,
                   height: 37,
-                  decoration: BoxDecoration(
-                    color: leadingColor,
-                    shape: BoxShape.circle,
-                  ),
                   child: Center(
                     child: RotatedBox(
                       quarterTurns: 2,
@@ -54,12 +53,11 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
               )
             : const SizedBox(),
         elevation: 0,
-        centerTitle: true,
+        centerTitle: centerTitle,
         actions: [
           if (logout)
             IconButton(
-              onPressed: () => Navigator.pushReplacement(
-                  context, MaterialPageRoute<void>(builder: (BuildContext context) => const StartScreen())),
+              onPressed: () => Navigator.pushReplacement(context, MaterialPageRoute<void>(builder: (BuildContext context) => const StartScreen())),
               icon: Center(
                 child: SvgPicture.asset(
                   'assets/images/icons/logout.svg',
