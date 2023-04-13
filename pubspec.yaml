@@ -43,6 +43,9 @@ dependencies:
   flutter_svg: ^2.0.0+1
   expandable: ^5.0.1
   expansion_tile_card: ^2.0.0
+  firebase_core: ^2.9.0
+  firebase_messaging: ^14.4.0
+  cloud_firestore: ^4.5.0
 
 dev_dependencies:
   flutter_test:
@@ -71,6 +74,7 @@ flutter:
     - assets/
     - assets/fonts/
     - assets/images/
+    - assets/images/icons/
     - assets/images/logo/
     - assets/images/icons/
 

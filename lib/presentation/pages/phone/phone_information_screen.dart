@@ -1,12 +1,11 @@
 import 'package:beeline_assistant/presentation/pages/payment/payment_menu_screen.dart';
-import 'package:beeline_assistant/presentation/pages/rate/all_rates_screen.dart';
 import 'package:beeline_assistant/presentation/widgets/black_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../widgets/custom_appbar.dart';
 import '../home/components/main_menu_card.dart';
-import '../rate/all_services_screen.dart';
+import '../rate/all_services_screen_.dart';
 import 'my_phone_services_screen.dart';
 import 'phone_service_info_screen.dart';
 
@@ -96,7 +95,7 @@ class _PhoneInformationScreenState extends State<PhoneInformationScreen> {
                                 child: BlackButton(
                                   title: 'Все тарифы',
                                   onPressed: () => Navigator.of(context)
-                                      .push(CupertinoPageRoute(builder: (context) => const AllRatesScreen())),
+                                      .push(CupertinoPageRoute(builder: (context) => const AllServicesScreen())),
                                 ),
                               ),
                             ],

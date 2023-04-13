@@ -1,14 +1,22 @@
 import 'dart:async';
+import 'package:beeline_assistant/presentation/pages/rate/all_services_screen.dart';
+import 'package:flutter/material.dart';
 
 import 'package:beeline_assistant/presentation/widgets/start_screen.dart';
-import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+import 'presentation/pages/home/home_screen.dart';
 
 final globalNavigatorKey = GlobalKey<NavigatorState>();
 
 void main() async {
   // await DI.init();
 
-  // Responsibility();
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
 
   runApp(const MyApp());
 }
@@ -21,6 +29,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+
   Timer? _timer;
 
   @override
@@ -43,8 +52,7 @@ class _MyAppState extends State<MyApp> {
           visualDensity: VisualDensity.adaptivePlatformDensity,
           primaryColor: const Color.fromRGBO(63, 159, 152, 1),
           primaryColorDark: const Color.fromRGBO(36, 33, 100, 1),
-          hoverColor: const Color.fromRGBO(39, 174, 96, 1),
-          scaffoldBackgroundColor: const Color.fromRGBO(0, 0, 0, 1),
+          scaffoldBackgroundColor: Colors.black,
           buttonTheme: const ButtonThemeData(
             buttonColor: Color.fromRGBO(63, 116, 216, 1),
             disabledColor: Color.fromRGBO(138, 138, 138, 1.0),
@@ -63,17 +71,17 @@ class _MyAppState extends State<MyApp> {
             onSurface: Color(0xFF54B435),
           ),
         ),
-        home: const StartScreen(),
+        home: const AllServicesScreen(),
+        // home: const StartScreen(),
       ),
     );
   }
 
   void _initializeTimer() {
-    if (_timer != null) {
-      _timer?.cancel();
-    }
 
-    _timer = Timer(const Duration(minutes: 2), _logOutUser);
+    _timer?.cancel();
+
+    _timer = Timer(const Duration(minutes: 12), _logOutUser);
   }
 
   void _logOutUser() {
@@ -87,4 +95,5 @@ class _MyAppState extends State<MyApp> {
   void _handleUserInteraction([_]) {
     _initializeTimer();
   }
+
 }
