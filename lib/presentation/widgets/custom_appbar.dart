@@ -1,4 +1,4 @@
-import 'package:beeline_assistant/presentation/widgets/start_screen.dart';
+import 'package:beeline_assistant/presentation/pages/home/start_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
