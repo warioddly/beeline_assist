@@ -28,7 +28,8 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
         backgroundColor: Colors.transparent,
         title: Text(
           title ?? '',
-          style: TextStyle(color: titleColor, fontWeight: FontWeight.w700, fontSize: 20),
+          style: TextStyle(
+              color: titleColor, fontWeight: FontWeight.w700, fontSize: 20),
         ),
         excludeHeaderSemantics: true,
         automaticallyImplyLeading: false,
@@ -64,6 +65,109 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
                   semanticsLabel: 'A red up arrow',
                   color: Colors.black,
                 ),
+              ),
+            )
+          else
+            SizedBox(
+              width: 207,
+              height: 48,
+              child: Stack(
+                children: <Widget>[
+                  Positioned(
+                    top: 10,
+                    left: 0,
+                    child: Container(
+                      width: 207,
+                      height: 48,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        color: const Color.fromRGBO(141, 139, 140, 1),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    top: 10,
+                    left: 68,
+                    child: Container(
+                      width: 72,
+                      height: 48,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        gradient: const LinearGradient(
+                            begin: Alignment(1, 0),
+                            end: Alignment(0, 1),
+                            colors: [
+                              Color.fromRGBO(249, 212, 35, 1),
+                              Color.fromRGBO(255, 159, 0, 1),
+                              Color.fromRGBO(255, 201, 0, 1)
+                            ]),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    top: (68 - 24) / 2,
+                    left: 87,
+                    child: InkWell(
+                      onTap: () {
+                        // Navigate to RU page or perform some other action
+                      },
+                      child: const Text(
+                        'RU',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color: Color.fromRGBO(0, 0, 0, 1),
+                            fontFamily: 'Open Sans',
+                            fontSize: 24,
+                            letterSpacing:
+                                0 /*percentages not used in flutter. defaulting to zero*/,
+                            fontWeight: FontWeight.w700,
+                            height: 1),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    top: (68 - 24) / 2,
+                    left: 21,
+                    child: InkWell(
+                      onTap: () {
+                        // Navigate to EN page or perform some other action
+                      },
+                      child: const Text(
+                        'EN',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color: Color.fromRGBO(15, 15, 15, 1),
+                            fontFamily: 'Open Sans',
+                            fontSize: 24,
+                            letterSpacing:
+                                0 /*percentages not used in flutter. defaulting to zero*/,
+                            fontWeight: FontWeight.w700,
+                            height: 1),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    top: (68 - 24) / 2,
+                    left: 153,
+                    child: InkWell(
+                      onTap: () {
+                        // Navigate to KG page or perform some other action
+                      },
+                      child: const Text(
+                        'KG',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color: Color.fromRGBO(15, 15, 15, 1),
+                            fontFamily: 'Open Sans',
+                            fontSize: 24,
+                            letterSpacing:
+                                0 /*percentages not used in flutter. defaulting to zero*/,
+                            fontWeight: FontWeight.w700,
+                            height: 1),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
         ],
