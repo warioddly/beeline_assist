@@ -1,11 +1,9 @@
 import 'dart:async';
-import 'package:beeline_assistant/presentation/pages/rate/all_services_screen.dart';
 import 'package:flutter/material.dart';
-
-import 'package:beeline_assistant/presentation/widgets/start_screen.dart';
+import 'package:beeline_assistant/presentation/pages/home/start_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
-import 'presentation/pages/home/home_screen.dart';
+
 
 final globalNavigatorKey = GlobalKey<NavigatorState>();
 
@@ -71,8 +69,7 @@ class _MyAppState extends State<MyApp> {
             onSurface: Color(0xFF54B435),
           ),
         ),
-        home: const AllServicesScreen(),
-        // home: const StartScreen(),
+        home: const StartScreen(),
       ),
     );
   }

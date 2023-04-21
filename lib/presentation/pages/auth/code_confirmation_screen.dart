@@ -1,20 +1,18 @@
-import 'package:beeline_assistant/presentation/pages/auth/code_confirmation_screen.dart';
 import 'package:beeline_assistant/presentation/widgets/text_input_field.dart';
 import 'package:beeline_assistant/presentation/widgets/yellow_button.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import '../../widgets/custom_appbar.dart';
 
-class SignUpScreen extends StatefulWidget {
+class CodeConfirmationScreen extends StatefulWidget {
 
-  const SignUpScreen({Key? key}) : super(key: key);
+  const CodeConfirmationScreen({Key? key}) : super(key: key);
 
   @override
-  State<StatefulWidget> createState() => _SignUpScreenState();
+  State<StatefulWidget> createState() => _CodeConfirmationScreenState();
 }
 
-class _SignUpScreenState extends State<SignUpScreen> with RouteAware {
+class _CodeConfirmationScreenState extends State<CodeConfirmationScreen> with RouteAware {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,7 +45,7 @@ class _SignUpScreenState extends State<SignUpScreen> with RouteAware {
                 ),
 
                 const Text(
-                  'Введите свой номер',
+                  'Введите код',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 22,
@@ -57,11 +55,11 @@ class _SignUpScreenState extends State<SignUpScreen> with RouteAware {
                 const SizedBox(height: 20),
 
                 TextInputField(
-                  hintText: "+996",
+                  hintText: "Введите код",
                   textType: TextInputType.phone,
                   inputFormatters: [
                     MaskTextInputFormatter(
-                        mask: '+996 (###) ###-###',
+                        mask: '######',
                         filter: { "#": RegExp(r'[0-9]') },
                         type: MaskAutoCompletionType.lazy
                     )
@@ -71,19 +69,8 @@ class _SignUpScreenState extends State<SignUpScreen> with RouteAware {
                 const SizedBox(height: 30),
 
                 YellowButton(
-                  onPressed: () => Navigator.push(context, CupertinoPageRoute(builder: (context) => const CodeConfirmationScreen())),
+                  onPressed: () { },
                   title: "Продолжить",
-                ),
-
-                const SizedBox(height: 15),
-
-                SelectableText(
-                  "Не получили код?",
-                  onTap: () { },
-                  style: const TextStyle(
-                    color: Color.fromRGBO(148, 152, 179, 1),
-                    fontWeight: FontWeight.w300
-                  ),
                 )
 
               ],
