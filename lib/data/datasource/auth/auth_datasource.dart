@@ -1,8 +1,8 @@
-import 'package:beeline_assistant/core/error/failure.dart';
-import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
-abstract class AuthRepository {
+
+abstract class AuthDataSource {
+
 
   Future<bool> signInWithCredential({ required AuthCredential credential, required Function(Object? error) onError });
 
