@@ -1,9 +1,11 @@
 import 'dart:async';
+
 import 'package:beeline_assistant/domain/usecases/auth/sign_in_with_credential_usecase.dart';
 import 'package:beeline_assistant/domain/usecases/auth/verify_phone_usecase.dart';
 import 'package:equatable/equatable.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
 part 'auth_state.dart';
 
 class AuthCubit extends Cubit<AuthState> {

@@ -1,4 +1,3 @@
-import 'package:beeline_assistant/presentation/widgets/yellow_button.dart';
 import 'package:flutter/material.dart';
 
 class CarouselCard extends StatefulWidget {

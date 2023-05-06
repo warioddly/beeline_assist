@@ -1,6 +1,4 @@
 import 'package:beeline_assistant/data/datasource/auth/auth_datasource.dart';
-import 'package:beeline_assistant/core/error/failure.dart';
-import 'package:dartz/dartz.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 

@@ -1,12 +1,8 @@
 import 'package:beeline_assistant/presentation/pages/rate/components/carousel_card.dart';
-import 'package:beeline_assistant/presentation/widgets/carousel_button.dart';
-import 'package:expandable_page_view/expandable_page_view.dart';
 import 'package:expansion_tile_card/expansion_tile_card.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+
 import '../../widgets/custom_appbar.dart';
-import '../phone/phone_service_info_screen.dart';
 
 class AllServicesScreen extends StatefulWidget {
   const AllServicesScreen({Key? key}) : super(key: key);
