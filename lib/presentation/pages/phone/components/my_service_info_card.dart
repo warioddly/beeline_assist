@@ -19,7 +19,7 @@ class _MyServiceInfoCardState extends State<MyServiceInfoCard> with RouteAware {
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
-      decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(16)),
+      decoration: BoxDecoration(color: const Color.fromRGBO(35, 35, 37, 1), borderRadius: BorderRadius.circular(16)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -31,7 +31,7 @@ class _MyServiceInfoCardState extends State<MyServiceInfoCard> with RouteAware {
                   widget.title,
                   maxLines: 2,
                   style: const TextStyle(
-                      color: Colors.black, fontSize: 14, fontWeight: FontWeight.w700, overflow: TextOverflow.ellipsis),
+                      color: Colors.white, fontSize: 14, fontWeight: FontWeight.w700, overflow: TextOverflow.ellipsis),
                 ),
                 SizedBox(height: widget.price != null ? 5 : 0),
                 widget.price != null
@@ -56,7 +56,7 @@ class _MyServiceInfoCardState extends State<MyServiceInfoCard> with RouteAware {
                         widget.subTitle!,
                         maxLines: 2,
                         style: const TextStyle(
-                            color: Colors.black,
+                            color: Color.fromRGBO(148, 152, 179, 1),
                             fontSize: 12,
                             fontWeight: FontWeight.w400,
                             overflow: TextOverflow.ellipsis),

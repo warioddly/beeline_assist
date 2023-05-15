@@ -41,11 +41,6 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
       ),
       extendBodyBehindAppBar: true,
       body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            colors: [Color.fromRGBO(35, 35, 37, 1), Color.fromRGBO(45, 45, 45, 1)],
-          ),
-        ),
         height: MediaQuery.of(context).size.height,
         padding: const EdgeInsets.only(top: 54),
         child: Scrollbar(
@@ -137,7 +132,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                                           TextSpan(
                                             text: '690 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+                                                color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
                                           ),
                                           TextSpan(
                                             text: ' / за 4 недели',
@@ -159,7 +154,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                                           TextSpan(
                                             text: '90 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+                                                color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
                                           ),
                                           TextSpan(
                                             text: ' / за 4 недели',
@@ -180,7 +175,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                                           TextSpan(
                                             text: '690 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+                                                color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
                                           ),
                                           TextSpan(
                                             text: ' / за 4 недели',
@@ -202,7 +197,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                                           TextSpan(
                                             text: '60 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+                                                color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
                                           ),
                                           TextSpan(
                                             text: ' / за 4 недели',
@@ -224,7 +219,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                                           TextSpan(
                                             text: '690 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+                                                color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
                                           ),
                                           TextSpan(
                                             text: ' / за 4 недели',
@@ -245,7 +240,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                                           TextSpan(
                                             text: '220 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+                                                    color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
                                           ),
                                           TextSpan(
                                             text: ' / за 4 недели',
@@ -268,7 +263,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                                           TextSpan(
                                             text: '60 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+                                                    color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
                                           ),
                                           TextSpan(
                                             text: ' / за 4 недели',
@@ -290,7 +285,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                                           TextSpan(
                                             text: '690 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+                                                    color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
                                           ),
                                           TextSpan(
                                             text: ' / за 4 недели',
@@ -313,7 +308,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                                           TextSpan(
                                             text: '690 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+                                                    color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
                                           ),
                                           TextSpan(
                                             text: ' / за 4 недели',
@@ -334,7 +329,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                                           TextSpan(
                                             text: '690 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+                                                    color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
                                           ),
                                           TextSpan(
                                             text: ' / за 4 недели',
@@ -357,7 +352,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                                           TextSpan(
                                             text: '60 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+                                                    color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
                                           ),
                                           TextSpan(
                                             text: ' / за 4 недели',
@@ -379,7 +374,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                                           TextSpan(
                                             text: '690 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+                                                    color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
                                           ),
                                           TextSpan(
                                             text: ' / за 4 недели',
@@ -407,7 +402,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                                           TextSpan(
                                             text: '690 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+                                                    color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
                                           ),
                                           TextSpan(
                                             text: ' / за 4 недели',
@@ -429,7 +424,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                                           TextSpan(
                                             text: '90 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+                                                    color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
                                           ),
                                           TextSpan(
                                             text: ' / за 4 недели',
@@ -450,7 +445,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                                           TextSpan(
                                             text: '690 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+                                                    color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
                                           ),
                                           TextSpan(
                                             text: ' / за 4 недели',
@@ -472,7 +467,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                                           TextSpan(
                                             text: '60 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+                                                    color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
                                           ),
                                           TextSpan(
                                             text: ' / за 4 недели',
@@ -494,7 +489,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                                           TextSpan(
                                             text: '690 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+                                                    color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
                                           ),
                                           TextSpan(
                                             text: ' / за 4 недели',
@@ -517,7 +512,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                                           TextSpan(
                                             text: '60 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+                                                    color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
                                           ),
                                           TextSpan(
                                             text: ' / за 4 недели',
@@ -539,7 +534,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                                           TextSpan(
                                             text: '690 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+                                                    color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
                                           ),
                                           TextSpan(
                                             text: ' / за 4 недели',
@@ -567,7 +562,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                                           TextSpan(
                                             text: '220 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+                                                    color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
                                           ),
                                           TextSpan(
                                             text: ' / за 4 недели',
@@ -590,7 +585,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                                           TextSpan(
                                             text: '60 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+                                                    color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
                                           ),
                                           TextSpan(
                                             text: ' / за 4 недели',
@@ -612,7 +607,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                                           TextSpan(
                                             text: '690 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+                                                    color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
                                           ),
                                           TextSpan(
                                             text: ' / за 4 недели',
@@ -635,7 +630,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                                           TextSpan(
                                             text: '690 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+                                                    color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
                                           ),
                                           TextSpan(
                                             text: ' / за 4 недели',
@@ -656,7 +651,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                                           TextSpan(
                                             text: '690 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+                                                    color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
                                           ),
                                           TextSpan(
                                             text: ' / за 4 недели',
@@ -679,7 +674,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                                           TextSpan(
                                             text: '60 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+                                                    color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
                                           ),
                                           TextSpan(
                                             text: ' / за 4 недели',
@@ -701,7 +696,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                                           TextSpan(
                                             text: '690 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+                                                    color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
                                           ),
                                           TextSpan(
                                             text: ' / за 4 недели',
@@ -729,7 +724,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                                           TextSpan(
                                             text: '690 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+                                                    color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
                                           ),
                                           TextSpan(
                                             text: ' / за 4 недели',
@@ -751,7 +746,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                                           TextSpan(
                                             text: '90 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+                                                    color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
                                           ),
                                           TextSpan(
                                             text: ' / за 4 недели',
@@ -772,7 +767,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                                           TextSpan(
                                             text: '690 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+                                                    color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
                                           ),
                                           TextSpan(
                                             text: ' / за 4 недели',
@@ -794,7 +789,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                                           TextSpan(
                                             text: '60 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+                                                    color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
                                           ),
                                           TextSpan(
                                             text: ' / за 4 недели',
@@ -816,7 +811,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                                           TextSpan(
                                             text: '690 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+                                                    color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
                                           ),
                                           TextSpan(
                                             text: ' / за 4 недели',
@@ -837,7 +832,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                                           TextSpan(
                                             text: '220 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+                                                    color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
                                           ),
                                           TextSpan(
                                             text: ' / за 4 недели',
@@ -860,7 +855,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                                           TextSpan(
                                             text: '60 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+                                                    color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
                                           ),
                                           TextSpan(
                                             text: ' / за 4 недели',
@@ -882,7 +877,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                                           TextSpan(
                                             text: '690 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+                                                    color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
                                           ),
                                           TextSpan(
                                             text: ' / за 4 недели',
@@ -905,7 +900,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                                           TextSpan(
                                             text: '690 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+                                                    color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
                                           ),
                                           TextSpan(
                                             text: ' / за 4 недели',
@@ -926,7 +921,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                                           TextSpan(
                                             text: '690 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+                                                    color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
                                           ),
                                           TextSpan(
                                             text: ' / за 4 недели',
@@ -949,7 +944,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                                           TextSpan(
                                             text: '60 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+                                                    color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
                                           ),
                                           TextSpan(
                                             text: ' / за 4 недели',
@@ -971,7 +966,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                                           TextSpan(
                                             text: '690 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+                                                    color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
                                           ),
                                           TextSpan(
                                             text: ' / за 4 недели',
@@ -999,7 +994,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                                           TextSpan(
                                             text: '690 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+                                                    color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
                                           ),
                                           TextSpan(
                                             text: ' / за 4 недели',
@@ -1020,7 +1015,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                                           TextSpan(
                                             text: '220 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+                                                    color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
                                           ),
                                           TextSpan(
                                             text: ' / за 4 недели',
@@ -1043,7 +1038,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                                           TextSpan(
                                             text: '60 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+                                                    color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
                                           ),
                                           TextSpan(
                                             text: ' / за 4 недели',
@@ -1065,7 +1060,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                                           TextSpan(
                                             text: '690 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+                                                    color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
                                           ),
                                           TextSpan(
                                             text: ' / за 4 недели',
@@ -1088,7 +1083,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                                           TextSpan(
                                             text: '690 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+                                                    color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
                                           ),
                                           TextSpan(
                                             text: ' / за 4 недели',
@@ -1109,7 +1104,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                                           TextSpan(
                                             text: '690 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+                                                    color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
                                           ),
                                           TextSpan(
                                             text: ' / за 4 недели',
@@ -1132,7 +1127,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                                           TextSpan(
                                             text: '60 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+                                                    color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
                                           ),
                                           TextSpan(
                                             text: ' / за 4 недели',
@@ -1154,7 +1149,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                                           TextSpan(
                                             text: '690 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontWeight: FontWeight.w700, fontSize: 20),
+                                                    color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
                                           ),
                                           TextSpan(
                                             text: ' / за 4 недели',
@@ -1193,7 +1188,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
         borderRadius: BorderRadius.circular(16),
         title: Text(
           title,
-          style: const TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.w600),
+          style: const TextStyle(    color: Colors.white, fontSize: 16, fontWeight: FontWeight.w600),
         ),
         children: <Widget>[
           SingleChildScrollView(
@@ -1206,7 +1201,7 @@ class _AllServicesScreenState extends State<AllServicesScreen> {
                 ),
                 child: Text(
                   body ?? "Пока тут пусто",
-                  style: const TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.w600),
+                  style: const TextStyle(    color: Colors.white, fontSize: 16, fontWeight: FontWeight.w600),
                 ),
               ),
             ),

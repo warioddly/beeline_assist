@@ -35,8 +35,9 @@ class _PhoneInformationScreenState extends State<PhoneInformationScreen> {
               child: Container(
                 constraints: const BoxConstraints(maxWidth: 730),
                 child: Wrap(
-                  spacing: 33.0,
-                  runSpacing: 33.0,
+                  spacing: 20.0,
+                  runSpacing: 20.0,
+                  crossAxisAlignment: WrapCrossAlignment.start,
                   children: [
 
                     Container(
@@ -46,11 +47,6 @@ class _PhoneInformationScreenState extends State<PhoneInformationScreen> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
-
-                          const Text(
-                            'Ваш баланс:',
-                            style: TextStyle(color: Colors.black, fontSize: 14, fontWeight: FontWeight.w600),
-                          ),
 
                           Container(
                             width: double.infinity,
@@ -62,31 +58,25 @@ class _PhoneInformationScreenState extends State<PhoneInformationScreen> {
                             child: Row(
                               children: [
 
-                                // Image.asset(
-                                //   '/assets/images/logo/beeline.png',
-                                //   width: 32,
-                                //   height: 32,
-                                // ),
+                                Image.network(
+                                  '/assets/images/logo/beeline.png',
+                                  width: 74,
+                                  height: 74,
+                                ),
 
-                                const SizedBox(width: 8),
+                                const SizedBox(width: 12),
 
                                 Flexible(
                                     child: Column(
-                                      children: [
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      children: const [
 
-                                        RichText(
-                                          textAlign: TextAlign.center,
-                                          text: const TextSpan(children: [
-                                            TextSpan(
-                                                text: '80.48',
-                                                style: TextStyle(color: Colors.white, fontSize: 64, fontWeight: FontWeight.w700)),
-                                            TextSpan(
-                                                text: '  сом',
-                                                style: TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.w600)),
-                                          ]),
-                                        ),
+                                         Text(
+                                          '80.48',
+                                          style: TextStyle(color: Colors.white, fontSize: 64, fontWeight: FontWeight.w700)),
 
-                                        const Text(
+                                         Text(
                                           "На вашем номере",
                                           style: TextStyle(
                                               color: Color.fromRGBO(148, 152, 179, 1),
@@ -104,7 +94,7 @@ class _PhoneInformationScreenState extends State<PhoneInformationScreen> {
                             ),
                           ),
 
-                          const SizedBox(height: 24),
+                          const SizedBox(height: 40),
 
                           Material(
                             color: const Color.fromRGBO(35, 35, 37, 1),
@@ -181,8 +171,7 @@ class _PhoneInformationScreenState extends State<PhoneInformationScreen> {
                             ),
                           ),
 
-
-                          const SizedBox(height: 20),
+                          const SizedBox(height: 40),
 
                           MenuCard(
                             title: "Ваши услуги (3)",
@@ -191,7 +180,7 @@ class _PhoneInformationScreenState extends State<PhoneInformationScreen> {
                             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
                           ),
 
-                          const SizedBox(height: 20),
+                          const SizedBox(height: 40),
 
                           Row(
                             children: [

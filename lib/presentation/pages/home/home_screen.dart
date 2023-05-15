@@ -84,7 +84,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           subTitle: 'Баланс, тариф, услуги',
                           icon: Icons.sim_card,
                           onTap: () =>
-                              Navigator.push(context, CupertinoPageRoute(builder: (context) => const StartScreen())),
+                              Navigator.push(context, CupertinoPageRoute(builder: (context) => const PhoneInformationScreen())),
                         ),
 
                         const SizedBox(height: 20),

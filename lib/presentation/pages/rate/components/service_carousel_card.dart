@@ -27,14 +27,14 @@ class _ServiceCarouselCardState extends State<ServiceCarouselCard> with RouteAwa
     return Container(
       width: 243,
       padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
-      decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(16)),
+      decoration: BoxDecoration(color: const Color.fromRGBO(35, 35, 37, 1), borderRadius: BorderRadius.circular(16)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             widget.title,
             style: const TextStyle(
-              color: Colors.black,
+              color: Colors.white,
               fontSize: 16,
               fontWeight: FontWeight.w600,
             ),
@@ -50,7 +50,7 @@ class _ServiceCarouselCardState extends State<ServiceCarouselCard> with RouteAwa
           widget.descriptionTitle != null
               ? Text(
                   widget.descriptionTitle!,
-                  style: const TextStyle(color: Colors.black, fontSize: 12, fontWeight: FontWeight.w600),
+                  style: const TextStyle( color: Colors.white, fontSize: 12, fontWeight: FontWeight.w600),
                 )
               : const SizedBox(),
           widget.description != null

@@ -1,4 +1,5 @@
 import 'package:beeline_assistant/presentation/widgets/black_button.dart';
+import 'package:beeline_assistant/presentation/widgets/yellow_button.dart';
 import 'package:expansion_tile_card/expansion_tile_card.dart';
 import 'package:flutter/material.dart';
 
@@ -18,11 +19,6 @@ class _PhoneServiceInfoScreenState extends State<PhoneServiceInfoScreen> {
       appBar: const CustomAppbar(),
       extendBodyBehindAppBar: true,
       body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            colors: [Color.fromRGBO(255, 159, 0, 1), Color.fromRGBO(255, 201, 0, 1)],
-          ),
-        ),
         height: MediaQuery.of(context).size.height,
         padding: const EdgeInsets.only(top: 74, left: 16, right: 16),
         child: Scrollbar(
@@ -50,7 +46,7 @@ class _PhoneServiceInfoScreenState extends State<PhoneServiceInfoScreen> {
                             constraints: const BoxConstraints(
                               maxWidth: 507,
                             ),
-                            decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(12)),
+                            decoration: BoxDecoration(color: const Color.fromRGBO(35, 35, 37, 1), borderRadius: BorderRadius.circular(12)),
                             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -67,24 +63,24 @@ class _PhoneServiceInfoScreenState extends State<PhoneServiceInfoScreen> {
                                     ),
                                     const Text(
                                       'Безлимит+',
-                                      style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 24),
+                                      style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700, fontSize: 24),
                                     ),
                                     const Text(
                                       'Смотрите бесплатно',
-                                      style: TextStyle(color: Colors.black, fontWeight: FontWeight.w400, fontSize: 16),
+                                      style: TextStyle(color: Colors.white, fontWeight: FontWeight.w400, fontSize: 16),
                                     ),
                                     Container(
                                       margin: const EdgeInsets.symmetric(vertical: 13),
                                       width: double.infinity,
                                       height: 1,
-                                      color: Colors.black,
+                                      color: Colors.white,
                                     ),
                                     RichText(
                                       text: const TextSpan(children: [
                                         TextSpan(
                                             text: 'Безлимитный',
                                             style: TextStyle(
-                                                color: Colors.black, fontSize: 14, fontWeight: FontWeight.w600)),
+                                                color: Colors.white, fontSize: 14, fontWeight: FontWeight.w600)),
                                         TextSpan(
                                             text: ' интернет',
                                             style: TextStyle(
@@ -99,7 +95,7 @@ class _PhoneServiceInfoScreenState extends State<PhoneServiceInfoScreen> {
                                         TextSpan(
                                             text: 'ИВИ',
                                             style: TextStyle(
-                                                color: Colors.black, fontSize: 14, fontWeight: FontWeight.w600)),
+                                                color: Colors.white, fontSize: 14, fontWeight: FontWeight.w600)),
                                         TextSpan(
                                             text: ' подписка на онлайн-кинетеатр',
                                             style: TextStyle(
@@ -114,7 +110,7 @@ class _PhoneServiceInfoScreenState extends State<PhoneServiceInfoScreen> {
                                         TextSpan(
                                             text: '100 минут',
                                             style: TextStyle(
-                                                color: Colors.black, fontSize: 14, fontWeight: FontWeight.w600)),
+                                                color: Colors.white, fontSize: 14, fontWeight: FontWeight.w600)),
                                         TextSpan(
                                             text: ' на звонки вне сети',
                                             style: TextStyle(
@@ -129,7 +125,7 @@ class _PhoneServiceInfoScreenState extends State<PhoneServiceInfoScreen> {
                                         TextSpan(
                                             text: 'Безлимитные',
                                             style: TextStyle(
-                                                color: Colors.black, fontSize: 14, fontWeight: FontWeight.w600)),
+                                                color: Colors.white, fontSize: 14, fontWeight: FontWeight.w600)),
                                         TextSpan(
                                             text: ' звонки и SMS внутри сети',
                                             style: TextStyle(
@@ -144,7 +140,7 @@ class _PhoneServiceInfoScreenState extends State<PhoneServiceInfoScreen> {
                                         TextSpan(
                                             text: 'Бесплатная',
                                             style: TextStyle(
-                                                color: Colors.black, fontSize: 14, fontWeight: FontWeight.w600)),
+                                                color: Colors.white, fontSize: 14, fontWeight: FontWeight.w600)),
                                         TextSpan(
                                             text: ' раздача Wi-Fi',
                                             style: TextStyle(
@@ -159,7 +155,7 @@ class _PhoneServiceInfoScreenState extends State<PhoneServiceInfoScreen> {
                                         TextSpan(
                                             text: '120 сом',
                                             style: TextStyle(
-                                                color: Colors.black, fontSize: 32, fontWeight: FontWeight.w700)),
+                                                color: Colors.white, fontSize: 32, fontWeight: FontWeight.w700)),
                                         TextSpan(
                                             text: ' / 4 недели',
                                             style: TextStyle(
@@ -175,9 +171,9 @@ class _PhoneServiceInfoScreenState extends State<PhoneServiceInfoScreen> {
                                   alignment: Alignment.centerLeft,
                                   child: Container(
                                     constraints: const BoxConstraints(maxWidth: 270),
-                                    child: BlackButton(
+                                    child: YellowButton(
                                       title: 'Все тарифы',
-                                      onPressed: () {},
+                                      onPressed: () { },
                                     ),
                                   ),
                                 )
@@ -242,11 +238,16 @@ SMS внутри КР - 1 сом.
   Widget getExpandedCard({required String title, String? body}) {
     return Container(
       margin: const EdgeInsets.only(bottom: 26),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(16),
+      ),
       child: ExpansionTileCard(
+        baseColor: const Color.fromRGBO(35, 35, 37, 1),
+        expandedColor: const Color.fromRGBO(35, 35, 37, 1),
         borderRadius: BorderRadius.circular(16),
         title: Text(
           title,
-          style: const TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.w600),
+          style: const TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w600),
         ),
         children: <Widget>[
           SingleChildScrollView(
@@ -259,7 +260,7 @@ SMS внутри КР - 1 сом.
                 ),
                 child: Text(
                   body ?? "Пока тут пусто",
-                  style: const TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.w600),
+                  style: const TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w600),
                 ),
               ),
             ),

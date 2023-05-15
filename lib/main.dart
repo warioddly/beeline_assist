@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:beeline_assistant/presentation/pages/home/home_screen.dart';
+import 'package:beeline_assistant/presentation/pages/phone/phone_service_info_screen.dart';
 import 'package:beeline_assistant/presentation/pages/rate/my_rate_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:beeline_assistant/presentation/pages/home/start_screen.dart';
@@ -84,7 +85,7 @@ class _MyAppState extends State<MyApp> {
               onSurface: Color(0xFF54B435),
             ),
           ),
-          home: const MyRateScreen(),
+          home: const StartScreen(),
         ),
       ),
     );

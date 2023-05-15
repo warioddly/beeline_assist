@@ -20,9 +20,6 @@ class _MyPhoneServicesScreenState extends State<MyPhoneServicesScreen> {
       extendBodyBehindAppBar: true,
       body: Container(
         decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            colors: [Color.fromRGBO(255, 159, 0, 1), Color.fromRGBO(255, 201, 0, 1)],
-          ),
           image: DecorationImage(
             image: AssetImage('assets/bibi.png'),
             fit: BoxFit.scaleDown,
