@@ -1,7 +1,4 @@
 import 'dart:async';
-import 'package:beeline_assistant/presentation/pages/home/home_screen.dart';
-import 'package:beeline_assistant/presentation/pages/phone/phone_service_info_screen.dart';
-import 'package:beeline_assistant/presentation/pages/rate/my_rate_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:beeline_assistant/presentation/pages/home/start_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -9,7 +6,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'firebase_options.dart';
 import 'presentation/cubit/auth/auth_cubit.dart';
 import 'dependency_injector.dart' as DI;
-import 'presentation/pages/phone/phone_information_screen.dart';
 
 
 final globalNavigatorKey = GlobalKey<NavigatorState>();
@@ -21,16 +17,14 @@ void main() async {
 
   WidgetsFlutterBinding.ensureInitialized();
 
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
   runApp(const MyApp());
 }
 
 
 class MyApp extends StatefulWidget {
-  const MyApp({super.key});
+  const MyApp({ super.key });
 
   @override
   State<MyApp> createState() => _MyAppState();

@@ -58,7 +58,7 @@ class _PhoneInformationScreenState extends State<PhoneInformationScreen> {
                             child: Row(
                               children: [
 
-                                Image.network(
+                                Image.asset(
                                   '/assets/images/logo/beeline.png',
                                   width: 74,
                                   height: 74,

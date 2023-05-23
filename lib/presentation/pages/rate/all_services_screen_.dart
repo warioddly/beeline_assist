@@ -1,6 +1,6 @@
 import 'package:beeline_assistant/presentation/widgets/carousel_button.dart';
+import 'package:beeline_assistant/presentation/widgets/expansion_tile_card.dart';
 import 'package:expandable_page_view/expandable_page_view.dart';
-import 'package:expansion_tile_card/expansion_tile_card.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

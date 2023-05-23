@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.warioddly.beeline_assistant">
+
    <application
         android:label="beeline_assistant"
         android:name="${applicationName}"

@@ -1,6 +1,6 @@
 import 'package:beeline_assistant/presentation/widgets/black_button.dart';
+import 'package:beeline_assistant/presentation/widgets/expansion_tile_card.dart';
 import 'package:beeline_assistant/presentation/widgets/yellow_button.dart';
-import 'package:expansion_tile_card/expansion_tile_card.dart';
 import 'package:flutter/material.dart';
 
 import '../../widgets/custom_appbar.dart';
