@@ -172,7 +172,7 @@ class _PhoneServiceInfoScreenState extends State<PhoneServiceInfoScreen> {
                                   child: Container(
                                     constraints: const BoxConstraints(maxWidth: 270),
                                     child: YellowButton(
-                                      title: 'Все тарифы',
+                                      title: 'Подключить',
                                       onPressed: () { },
                                     ),
                                   ),

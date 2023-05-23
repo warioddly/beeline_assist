@@ -10,7 +10,8 @@ class MyRateScreen extends StatefulWidget {
   _MyRateScreenState createState() => _MyRateScreenState();
 }
 
-class _MyRateScreenState extends State<MyRateScreen> with SingleTickerProviderStateMixin {
+class _MyRateScreenState extends State<MyRateScreen>
+    with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,12 +48,20 @@ class _MyRateScreenState extends State<MyRateScreen> with SingleTickerProviderSt
                   ),
                   const Text(
                     "Безлимит+",
-                    style: TextStyle(color: Colors.white, fontSize: 32, fontWeight: FontWeight.w400, overflow: TextOverflow.ellipsis),
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 32,
+                        fontWeight: FontWeight.w400,
+                        overflow: TextOverflow.ellipsis),
                   ),
                   const SizedBox(height: 3),
                   const Text(
                     "980 cом / 4 недели",
-                    style: TextStyle(color: Color.fromRGBO(148, 152, 179, 1), fontSize: 14, fontWeight: FontWeight.w400, overflow: TextOverflow.ellipsis),
+                    style: TextStyle(
+                        color: Color.fromRGBO(148, 152, 179, 1),
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400,
+                        overflow: TextOverflow.ellipsis),
                   ),
                   const SizedBox(height: 32),
                   Container(
@@ -74,13 +83,20 @@ class _MyRateScreenState extends State<MyRateScreen> with SingleTickerProviderSt
                           children: const [
                             Text(
                               "Интернет",
-                              style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w600, overflow: TextOverflow.ellipsis),
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w600,
+                                  overflow: TextOverflow.ellipsis),
                             ),
                             SizedBox(height: 3),
                             Text(
                               "Безлимитный",
                               style: TextStyle(
-                                  color: Color.fromRGBO(148, 152, 179, 1), fontSize: 18, fontWeight: FontWeight.w400, overflow: TextOverflow.ellipsis),
+                                  color: Color.fromRGBO(148, 152, 179, 1),
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w400,
+                                  overflow: TextOverflow.ellipsis),
                             ),
                           ],
                         )
@@ -106,13 +122,20 @@ class _MyRateScreenState extends State<MyRateScreen> with SingleTickerProviderSt
                           children: const [
                             Text(
                               "ИВИ",
-                              style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w600, overflow: TextOverflow.ellipsis),
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w600,
+                                  overflow: TextOverflow.ellipsis),
                             ),
                             SizedBox(height: 3),
                             Text(
                               "Подписка на онлайн-кинотеатр",
                               style: TextStyle(
-                                  color: Color.fromRGBO(148, 152, 179, 1), fontSize: 18, fontWeight: FontWeight.w400, overflow: TextOverflow.ellipsis),
+                                  color: Color.fromRGBO(148, 152, 179, 1),
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w400,
+                                  overflow: TextOverflow.ellipsis),
                             ),
                           ],
                         )
@@ -138,13 +161,20 @@ class _MyRateScreenState extends State<MyRateScreen> with SingleTickerProviderSt
                           children: const [
                             Text(
                               "Интернет",
-                              style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w600, overflow: TextOverflow.ellipsis),
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w600,
+                                  overflow: TextOverflow.ellipsis),
                             ),
                             SizedBox(height: 3),
                             Text(
                               "Безлимитный",
                               style: TextStyle(
-                                  color: Color.fromRGBO(148, 152, 179, 1), fontSize: 18, fontWeight: FontWeight.w400, overflow: TextOverflow.ellipsis),
+                                  color: Color.fromRGBO(148, 152, 179, 1),
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w400,
+                                  overflow: TextOverflow.ellipsis),
                             ),
                           ],
                         )
@@ -170,13 +200,20 @@ class _MyRateScreenState extends State<MyRateScreen> with SingleTickerProviderSt
                           children: const [
                             Text(
                               "Интернет",
-                              style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w600, overflow: TextOverflow.ellipsis),
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w600,
+                                  overflow: TextOverflow.ellipsis),
                             ),
                             SizedBox(height: 3),
                             Text(
                               "Безлимитный",
                               style: TextStyle(
-                                  color: Color.fromRGBO(148, 152, 179, 1), fontSize: 18, fontWeight: FontWeight.w400, overflow: TextOverflow.ellipsis),
+                                  color: Color.fromRGBO(148, 152, 179, 1),
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w400,
+                                  overflow: TextOverflow.ellipsis),
                             ),
                           ],
                         )
@@ -188,35 +225,36 @@ class _MyRateScreenState extends State<MyRateScreen> with SingleTickerProviderSt
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
-
                         const Text(
                           "Подробности",
-                          style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold, overflow: TextOverflow.ellipsis),
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              overflow: TextOverflow.ellipsis),
                         ),
-
                         const SizedBox(height: 12),
-
-                        Container(
-                          decoration: BoxDecoration(
-                            color: const Color.fromRGBO(35, 35, 37, 1),
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          padding: const EdgeInsets.symmetric(horizontal: 35, vertical: 16),
-                          child: ExpandableTheme(
-                            data: const ExpandableThemeData(
-                              iconColor: Color.fromRGBO(137, 135, 135, 1),
-                              collapseIcon: Icons.keyboard_arrow_up,
-                              expandIcon: Icons.keyboard_arrow_down,
-                              hasIcon: true,
+                        SingleChildScrollView(
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: const Color.fromRGBO(35, 35, 37, 1),
+                              borderRadius: BorderRadius.circular(10),
                             ),
-                            child: Column(
-                              children: [
-
-
-                                ExpandableNotifier(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 35, vertical: 16),
+                            child: ExpandableTheme(
+                              data: const ExpandableThemeData(
+                                iconColor: Color.fromRGBO(137, 135, 135, 1),
+                                collapseIcon: Icons.keyboard_arrow_up,
+                                expandIcon: Icons.keyboard_arrow_down,
+                                hasIcon: true,
+                              ),
+                              child: Column(
+                                children: [
+                                  ExpandableNotifier(
                                     child: ExpandablePanel(
                                       header: const Padding(
-                                        padding:  EdgeInsets.only(top: 12),
+                                        padding: EdgeInsets.only(top: 12),
                                         child: Text(
                                           "Управляйте тарифом в любое время",
                                           style: TextStyle(
@@ -229,92 +267,81 @@ class _MyRateScreenState extends State<MyRateScreen> with SingleTickerProviderSt
                                       collapsed: const Text(
                                         "",
                                         style: TextStyle(
-                                            color: Colors.white,
-                                            height: 0
-                                        ),
+                                            color: Colors.white, height: 0),
                                       ),
                                       expanded: const Text(
                                         "Управляйте тарифом в любое время awdaw "
-                                            "dawdawdawdinawdpiuahwiudhawiudhiaowhda"
-                                            "awdkjlnlkjsnlkjznclkjnzlkcnzkxjnklznxc "
-                                            "zx,cnzx,mnc.mzxnc,zxmnc,zmxnc.,znx.c,nz.xc",
+                                        "dawdawdawdinawdpiuahwiudhawiudhiaowhda"
+                                        "awdkjlnlkjsnlkjznclkjnzlkcnzkxjnklznxc "
+                                        "zx,cnzx,mnc.mzxnc,zxmnc,zmxnc.,znx.c,nz.xc",
                                         style: TextStyle(
                                           color: Colors.white,
                                         ),
-                                      ),
-                                    ),
-                                ),
-
-                                const SizedBox(height: 12),
-
-                                ExpandableNotifier(
-                                  child: ExpandablePanel(
-                                    header: const Padding(
-                                      padding:  EdgeInsets.only(top: 12),
-                                      child: Text(
-                                        "Управляйте тарифом в любое время",
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.w600,
-                                        ),
-                                      ),
-                                    ),
-                                    collapsed: const Text(
-                                      "",
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          height: 0
-                                      ),
-                                    ),
-                                    expanded: const Text(
-                                      "Управляйте тарифом в любое время awdaw "
-                                          "dawdawdawdinawdpiuahwiudhawiudhiaowhda"
-                                          "awdkjlnlkjsnlkjznclkjnzlkcnzkxjnklznxc "
-                                          "zx,cnzx,mnc.mzxnc,zxmnc,zmxnc.,znx.c,nz.xc",
-                                      style: TextStyle(
-                                        color: Colors.white,
                                       ),
                                     ),
                                   ),
-                                ),
-
-                                const SizedBox(height: 12),
-
-                                ExpandableNotifier(
-                                  child: ExpandablePanel(
-                                    header: const Padding(
-                                      padding:  EdgeInsets.only(top: 12),
-                                      child: Text(
-                                        "Управляйте тарифом в любое время",
+                                  const SizedBox(height: 12),
+                                  ExpandableNotifier(
+                                    child: ExpandablePanel(
+                                      header: const Padding(
+                                        padding: EdgeInsets.only(top: 12),
+                                        child: Text(
+                                          "Управляйте тарифом в любое время",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.w600,
+                                          ),
+                                        ),
+                                      ),
+                                      collapsed: const Text(
+                                        "",
+                                        style: TextStyle(
+                                            color: Colors.white, height: 0),
+                                      ),
+                                      expanded: const Text(
+                                        "Управляйте тарифом в любое время awdaw "
+                                        "dawdawdawdinawdpiuahwiudhawiudhiaowhda"
+                                        "awdkjlnlkjsnlkjznclkjnzlkcnzkxjnklznxc "
+                                        "zx,cnzx,mnc.mzxnc,zxmnc,zmxnc.,znx.c,nz.xc",
                                         style: TextStyle(
                                           color: Colors.white,
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.w600,
                                         ),
                                       ),
                                     ),
-                                    collapsed: const Text(
-                                      "",
-                                      style: TextStyle(
-                                          color: Colors.white,
-                                          height: 0
+                                  ),
+                                  const SizedBox(height: 12),
+                                  ExpandableNotifier(
+                                    child: ExpandablePanel(
+                                      header: const Padding(
+                                        padding: EdgeInsets.only(top: 12),
+                                        child: Text(
+                                          "Управляйте тарифом в любое время",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.w600,
+                                          ),
+                                        ),
                                       ),
-                                    ),
-                                    expanded: const Text(
-                                      "Управляйте тарифом в любое время awdaw "
-                                          "dawdawdawdinawdpiuahwiudhawiudhiaowhda"
-                                          "awdkjlnlkjsnlkjznclkjnzlkcnzkxjnklznxc "
-                                          "zx,cnzx,mnc.mzxnc,zxmnc,zmxnc.,znx.c,nz.xc",
-                                      style: TextStyle(
-                                        color: Colors.white,
+                                      collapsed: const Text(
+                                        "",
+                                        style: TextStyle(
+                                            color: Colors.white, height: 0),
+                                      ),
+                                      expanded: const Text(
+                                        "Управляйте тарифом в любое время awdaw "
+                                        "dawdawdawdinawdpiuahwiudhawiudhiaowhda"
+                                        "awdkjlnlkjsnlkjznclkjnzlkcnzkxjnklznxc "
+                                        "zx,cnzx,mnc.mzxnc,zxmnc,zmxnc.,znx.c,nz.xc",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                        ),
                                       ),
                                     ),
                                   ),
-                                ),
-
-
-                              ],
+                                ],
+                              ),
                             ),
                           ),
                         ),

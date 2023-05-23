@@ -4,6 +4,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../phone/phone_information_screen.dart';
+import '../rate/all_services_screen.dart';
+import '../rate/all_tariffs_screen.dart';
 import 'components/main_menu_card.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -70,7 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
 
                         MenuCard(
-                          title: 'Предложить новые тарифы и услуги',
+                          title: 'Детализация по номеру телефона',
                           subTitle: 'Баланс, тариф, услуги',
                           icon: Icons.qr_code,
                           onTap: () => Navigator.push(
@@ -80,21 +82,21 @@ class _HomeScreenState extends State<HomeScreen> {
                         const SizedBox(height: 20),
 
                         MenuCard(
-                          title: 'Найти информацию по вашему номеру',
+                          title: 'Предложить новые услуги',
                           subTitle: 'Баланс, тариф, услуги',
                           icon: Icons.sim_card,
                           onTap: () =>
-                              Navigator.push(context, CupertinoPageRoute(builder: (context) => const PhoneInformationScreen())),
+                              Navigator.push(context, CupertinoPageRoute(builder: (context) => const AllServicesScreen())),
                         ),
 
                         const SizedBox(height: 20),
 
                         MenuCard(
-                          title: 'Показать выгодные акции',
+                          title: 'Показать новые тарифы',
                           subTitle: 'Баланс, тариф, услуги',
                           icon: Icons.sim_card,
                           onTap: () => Navigator.push(
-                              context, CupertinoPageRoute(builder: (context) => const PhoneInformationScreen())),
+                              context, CupertinoPageRoute(builder: (context) => const AllTariffsScreen())),
                         ),
 
                       ],

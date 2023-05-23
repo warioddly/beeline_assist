@@ -7,6 +7,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../widgets/custom_appbar.dart';
 import '../home/components/main_menu_card.dart';
 import '../rate/all_services_screen_.dart';
+import '../rate/all_tariffs_screen.dart';
 import 'my_phone_services_screen.dart';
 
 class PhoneInformationScreen extends StatefulWidget {
@@ -58,12 +59,17 @@ class _PhoneInformationScreenState extends State<PhoneInformationScreen> {
                             child: Row(
                               children: [
 
-                                Image.asset(
-                                  '/assets/images/logo/beeline.png',
-                                  width: 74,
-                                  height: 74,
+                                Container(
+                                  width: 70,  // width of the container
+                                  height: 70,  // height of the container
+                                  decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                      image: AssetImage('assets/images/logo/beeline.png'),
+                                      fit: BoxFit.cover,  // fills the entire container
+                                      alignment: Alignment.bottomRight,
+                                    ),
+                                  ),
                                 ),
-
                                 const SizedBox(width: 12),
 
                                 Flexible(
@@ -196,7 +202,7 @@ class _PhoneInformationScreenState extends State<PhoneInformationScreen> {
                                 child: YellowButton(
                                   title: 'Все тарифы',
                                   onPressed: () => Navigator.of(context)
-                                      .push(CupertinoPageRoute(builder: (context) => const AllServicesScreen())),
+                                      .push(CupertinoPageRoute(builder: (context) => const AllTariffsScreen())),
                                 ),
                               ),
                             ],
