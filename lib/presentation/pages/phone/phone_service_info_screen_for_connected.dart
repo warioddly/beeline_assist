@@ -5,14 +5,14 @@ import 'package:flutter/material.dart';
 
 import '../../widgets/custom_appbar.dart';
 
-class PhoneServiceInfoScreen extends StatefulWidget {
-  const PhoneServiceInfoScreen({Key? key}) : super(key: key);
+class PhoneServiceInfoScreenForConnected extends StatefulWidget {
+  const PhoneServiceInfoScreenForConnected({Key? key}) : super(key: key);
 
   @override
-  _PhoneServiceInfoScreenState createState() => _PhoneServiceInfoScreenState();
+  _PhoneServiceInfoScreenForConnectedState createState() => _PhoneServiceInfoScreenForConnectedState();
 }
 
-class _PhoneServiceInfoScreenState extends State<PhoneServiceInfoScreen> {
+class _PhoneServiceInfoScreenForConnectedState extends State<PhoneServiceInfoScreenForConnected> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -172,60 +172,62 @@ class _PhoneServiceInfoScreenState extends State<PhoneServiceInfoScreen> {
                                   child: Container(
                                     constraints: const BoxConstraints(maxWidth: 270),
                                     child: YellowButton(
-                                      title: 'Подключить',
+                                      title: 'Отменить',
                                       onPressed: () {
+
+
                                         showDialog(
                                             context: context,
                                             builder: (ctx) {
                                               return AlertDialog(
-                                                title: const Text('Вы точно хотите подключить данный тариф?'),
+                                                title: const Text('Вы точно хотите отменить данный тариф?'),
                                                 actions: [
-                                                  TextButton(
-                                                      onPressed: () {
-                                                        Navigator.of(ctx).pop();
-                                                      },
-                                                      child: const Text('Отменa')
-                                                  ),
+                                                    TextButton(
+                                                        onPressed: () {
+                                                            Navigator.of(ctx).pop();
+                                                        },
+                                                        child: const Text('Отменa')
+                                                    ),
 
                                                   TextButton(
                                                       onPressed: () {
 
-                                                        showDialog(
-                                                          context: ctx,
-                                                          builder: (context) {
+                                                          showDialog(
+                                                            context: ctx,
+                                                            builder: (context) {
 
-                                                            Future.delayed(const Duration(seconds: 1), () {
+                                                              Future.delayed(const Duration(seconds: 1), () {
 
-                                                              try {
-                                                                Navigator.of(ctx).pop();
-                                                                Navigator.of(context).pop();
-                                                              }
-                                                              catch (e) {}
+                                                                try {
+                                                                  Navigator.of(ctx).pop();
+                                                                  Navigator.of(context).pop();
+                                                                }
+                                                                catch (e) {}
 
-                                                            });
+                                                              });
 
-                                                            return AlertDialog(
-                                                                content: Column(
-                                                                  mainAxisSize: MainAxisSize.min,
-                                                                  children: const [
+                                                              return AlertDialog(
+                                                                  content: Column(
+                                                                    mainAxisSize: MainAxisSize.min,
+                                                                    children: const [
 
-                                                                    Icon(
-                                                                      Icons.check_circle_outline,
-                                                                      color: Colors.green,
-                                                                      size: 40,
-                                                                    ),
+                                                                      Icon(
+                                                                        Icons.check_circle_outline,
+                                                                        color: Colors.green,
+                                                                        size: 40,
+                                                                      ),
 
-                                                                    SizedBox(height: 16,),
+                                                                      SizedBox(height: 16,),
 
-                                                                    Text(
-                                                                        'Вы успешно подключили тариф!'
-                                                                    )
+                                                                      Text(
+                                                                          'Вы успешно отменили тариф'
+                                                                      )
 
-                                                                  ],
-                                                                )
-                                                            );
-                                                          },
-                                                        );
+                                                                    ],
+                                                                  )
+                                                              );
+                                                            },
+                                                          );
 
                                                       },
                                                       child: const Text('Да')
@@ -236,6 +238,7 @@ class _PhoneServiceInfoScreenState extends State<PhoneServiceInfoScreen> {
                                                 ],
                                               );
                                             });
+
 
                                       },
                                     ),

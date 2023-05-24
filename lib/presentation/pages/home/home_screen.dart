@@ -1,11 +1,12 @@
 import 'package:beeline_assistant/presentation/pages/home/start_screen.dart';
+import 'package:beeline_assistant/presentation/pages/rate/all_services_screen_.dart';
+import 'package:beeline_assistant/presentation/pages/rate/all_tariffs_screen.dart';
 import 'package:beeline_assistant/presentation/widgets/custom_appbar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../auth/sign_up_screen.dart';
 import '../phone/phone_information_screen.dart';
-import '../rate/all_services_screen.dart';
-import '../rate/all_tariffs_screen.dart';
 import 'components/main_menu_card.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -49,14 +50,14 @@ class _HomeScreenState extends State<HomeScreen> {
                             Text(
                               "Здравствуйте!",
                               style: TextStyle(
-                                fontSize: 43,
-                                fontWeight: FontWeight.w700,
-                                color: Colors.white
+                                  fontSize: 43,
+                                  fontWeight: FontWeight.w700,
+                                  color: Colors.white
                               ),
                             ),
 
                             Text(
-                                "Я помощник Bibi. Я помогу Вам:",
+                              "Я помощник Bibi. Я помогу Вам:",
                               style: TextStyle(
                                   fontSize: 22,
                                   fontWeight: FontWeight.w400,
@@ -72,31 +73,31 @@ class _HomeScreenState extends State<HomeScreen> {
 
 
                         MenuCard(
-                          title: 'Детализация по номеру телефона',
-                          subTitle: 'Баланс, тариф, услуги',
-                          icon: Icons.qr_code,
+                          title: 'Исследуйте свой номер',
+                          subTitle: 'Получите полную детализацию по вашему номеру',
+                          icon: Icons.phone,
                           onTap: () => Navigator.push(
-                              context, CupertinoPageRoute(builder: (context) => const PhoneInformationScreen())),
+                              context, CupertinoPageRoute(builder: (context) => const SignUpScreen())),
                         ),
 
                         const SizedBox(height: 20),
 
                         MenuCard(
-                          title: 'Предложить новые услуги',
-                          subTitle: 'Баланс, тариф, услуги',
+                          title: 'Откройте мир тарифов',
+                          subTitle: 'Просмотрите все доступные тарифы для выбора',
                           icon: Icons.sim_card,
                           onTap: () =>
-                              Navigator.push(context, CupertinoPageRoute(builder: (context) => const AllServicesScreen())),
+                              Navigator.push(context, CupertinoPageRoute(builder: (context) => const AllTariffsScreen())),
                         ),
 
                         const SizedBox(height: 20),
 
                         MenuCard(
-                          title: 'Показать новые тарифы',
-                          subTitle: 'Баланс, тариф, услуги',
-                          icon: Icons.sim_card,
+                          title: 'Обзор выгодных услуг',
+                          subTitle: 'Ознакомьтесь с уникальными услугами для вас',
+                          icon: Icons.account_balance_wallet,
                           onTap: () => Navigator.push(
-                              context, CupertinoPageRoute(builder: (context) => const AllTariffsScreen())),
+                              context, CupertinoPageRoute(builder: (context) => const AllServicesScreen())),
                         ),
 
                       ],

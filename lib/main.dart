@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:beeline_assistant/presentation/pages/home/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:beeline_assistant/presentation/pages/home/start_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -79,7 +80,7 @@ class _MyAppState extends State<MyApp> {
               onSurface: Color(0xFF54B435),
             ),
           ),
-          home: const StartScreen(),
+          home: const HomeScreen(),
         ),
       ),
     );
@@ -97,7 +98,7 @@ class _MyAppState extends State<MyApp> {
     _timer = null;
 
     globalNavigatorKey.currentState
-        ?.pushReplacement(MaterialPageRoute<void>(builder: (BuildContext context) => const StartScreen()));
+        ?.pushReplacement(MaterialPageRoute<void>(builder: (BuildContext context) => const HomeScreen()));
   }
 
   void _handleUserInteraction([_]) {

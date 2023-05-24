@@ -107,7 +107,7 @@ class _SignUpScreenState extends State<SignUpScreen> with RouteAware {
                   const SizedBox(height: 20),
 
                   TextInputField(
-                    hintText: "+996",
+                    hintText: "+996 ",
                     controller: _phoneController,
                     textType: TextInputType.phone,
                     inputFormatters: [
@@ -122,14 +122,35 @@ class _SignUpScreenState extends State<SignUpScreen> with RouteAware {
                   const SizedBox(height: 30),
 
                   YellowButton(
-                    onPressed: () {
+                    onPressed: () async {
 
                       if (_isLoading) return;
 
+                      setState(() {
+                        _isLoading = true;
+                      });
+
                       String phoneNumber = _phoneController.text.replaceAll(RegExp(r'[^\d]'), '');
 
+                      /// phoneNumber.length == 12 && phoneNumber == "+996554938009"
                       if (phoneNumber.length == 12) {
-                        authCubit.onSendOtp(phone: _phoneController.text);
+
+                        ScaffoldMessenger.of(context).clearSnackBars();
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text("Loading..."),
+                            backgroundColor: Colors.green,
+                          ),
+                        );
+
+
+                        await Future.delayed(const Duration(seconds: 2), () {
+                          Navigator.push(context, CupertinoPageRoute(builder: (context) => const CodeConfirmationScreen(verificationId: "state.verificationId")));
+                          setState(() {_isLoading = false;});
+
+                        });
+
+                        // authCubit.onSendOtp(phone: _phoneController.text);
                       } else {
 
                         ScaffoldMessenger.of(context).showSnackBar(
@@ -138,6 +159,11 @@ class _SignUpScreenState extends State<SignUpScreen> with RouteAware {
                             backgroundColor: Colors.red,
                           ),
                         );
+
+
+                        setState(() {
+                          _isLoading = false;
+                        });
 
                       }
 

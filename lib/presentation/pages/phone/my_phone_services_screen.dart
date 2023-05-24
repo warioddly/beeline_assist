@@ -1,3 +1,4 @@
+import 'package:beeline_assistant/presentation/pages/phone/phone_service_info_screen_for_connected.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -44,7 +45,7 @@ class _MyPhoneServicesScreenState extends State<MyPhoneServicesScreen> {
                           subTitle: "Безлимитный трафик на YouTube и WhatsApp",
                           price: "120 сом / за 4 недели",
                           onTap: () => Navigator.of(context)
-                              .push(CupertinoPageRoute(builder: (context) => const PhoneServiceInfoScreen())),
+                              .push(CupertinoPageRoute(builder: (context) => const PhoneServiceInfoScreenForConnected())),
                         ),
                         const SizedBox(height: 13),
                         MyServiceInfoCard(
@@ -52,7 +53,7 @@ class _MyPhoneServicesScreenState extends State<MyPhoneServicesScreen> {
                           subTitle: "Забота о близких - это просто",
                           price: "3 сом / сутки",
                           onTap: () => Navigator.of(context)
-                              .push(CupertinoPageRoute(builder: (context) => const PhoneServiceInfoScreen())),
+                              .push(CupertinoPageRoute(builder: (context) => const PhoneServiceInfoScreenForConnected())),
                         ),
                         const SizedBox(height: 13),
                         MyServiceInfoCard(
@@ -60,7 +61,7 @@ class _MyPhoneServicesScreenState extends State<MyPhoneServicesScreen> {
                           subTitle: "Играй сколько угодно!",
                           price: "от 15 до 240 сомов",
                           onTap: () => Navigator.of(context)
-                              .push(CupertinoPageRoute(builder: (context) => const PhoneServiceInfoScreen())),
+                              .push(CupertinoPageRoute(builder: (context) => const PhoneServiceInfoScreenForConnected())),
                         ),
                       ],
                     ),

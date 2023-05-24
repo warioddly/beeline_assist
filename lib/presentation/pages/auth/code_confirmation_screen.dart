@@ -1,5 +1,5 @@
 import 'package:beeline_assistant/presentation/cubit/auth/auth_cubit.dart';
-import 'package:beeline_assistant/presentation/pages/home/home_screen.dart';
+// import 'package:beeline_assistant/presentation/pages/home/home_screen.dart';
 import 'package:beeline_assistant/presentation/widgets/text_input_field.dart';
 import 'package:beeline_assistant/presentation/widgets/yellow_button.dart';
 import 'package:flutter/cupertino.dart';
@@ -8,6 +8,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 
 import '../../widgets/custom_appbar.dart';
+import '../phone/phone_information_screen.dart';
 
 
 class CodeConfirmationScreen extends StatefulWidget {
@@ -80,8 +81,9 @@ class _CodeConfirmationScreenState extends State<CodeConfirmationScreen> with Ro
 
                     if (state is AuthUserVerified) {
 
-                      Navigator.pushReplacement(context, CupertinoPageRoute(builder: (context) => const HomeScreen()));
+                      Navigator.pushReplacement(context, CupertinoPageRoute(builder: (context) => const PhoneInformationScreen()));
 
+                      ScaffoldMessenger.of(context).clearSnackBars();
                       ScaffoldMessenger.of(context).showSnackBar(
                         const SnackBar(
                           content: Text("Success..."),
@@ -150,18 +152,44 @@ class _CodeConfirmationScreenState extends State<CodeConfirmationScreen> with Ro
                         const SizedBox(height: 30),
 
                         YellowButton(
-                          onPressed: () {
-
+                          onPressed: () async {
 
                             if (_isLoading) return;
 
+                            setState(() {
+                              _isLoading = true;
+                            });
+
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              const SnackBar(
+                                content: Text("Loading..."),
+                                backgroundColor: Colors.green,
+                              ),
+                            );
+
                             String code = _codeController.text.replaceAll(RegExp(r'[^\d]'), '');
 
-                            print(code);
-                            print(code.length == 7);
 
+                            // TODO: code.length == 6 && code == "123456"
                             if (code.length == 6) {
-                              authCubit.onVerifyOtp(widget.verificationId, code);
+                              // authCubit.onVerifyOtp(widget.verificationId, code);
+                              await Future.delayed(const Duration(seconds: 2), () {
+                                Navigator.pushReplacement(context, CupertinoPageRoute(builder: (context) => const PhoneInformationScreen()));
+
+                                ScaffoldMessenger.of(context).clearSnackBars();
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  const SnackBar(
+                                    content: Text("Success..."),
+                                    backgroundColor: Colors.green,
+                                  ),
+                                );
+
+
+                                setState(() {
+                                  _isLoading = false;
+                                });
+                              });
+
                             }
                             else {
 
@@ -171,7 +199,9 @@ class _CodeConfirmationScreenState extends State<CodeConfirmationScreen> with Ro
                                   backgroundColor: Colors.red,
                                 ),
                               );
-
+                              setState(() {
+                                _isLoading = false;
+                              });
                             }
 
                           },
